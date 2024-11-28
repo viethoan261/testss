@@ -34,7 +34,6 @@ public class JwtHelper {
         UserModel user = userRepository.findByUserName(username).get();
         Map<String, Object> claims = new HashMap<>();
 
-        claims.put("role",user.getRole());
         claims.put("id", user.getId());
 
         Date currentDate = new Date();

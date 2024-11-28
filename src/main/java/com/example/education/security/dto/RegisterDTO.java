@@ -1,7 +1,6 @@
 package com.example.education.security.dto;
 
 import com.example.education.security.validation.NotExistedUser;
-import com.example.education.utils.enumm.RoleUser;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
@@ -18,8 +17,5 @@ public class RegisterDTO {
 
     @NotBlank(message = "Full name can not be blank")
     private String fullName;
-
-    @NotNull(message = "Role not null")
-    private RoleUser role;
 }
 

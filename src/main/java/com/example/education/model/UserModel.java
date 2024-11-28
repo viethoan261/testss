@@ -1,7 +1,6 @@
 package com.example.education.model;
 
 import com.example.education.common.model.BaseEntity;
-import com.example.education.utils.enumm.RoleUser;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,10 +19,6 @@ import java.time.LocalDate;
 public class UserModel extends BaseEntity {
     @Column(name = "username", unique = true, nullable = false, length = 50)
     private String userName;
-
-    @Column(name = "role", nullable = false, length = 100)
-    @Enumerated(EnumType.STRING)
-    private RoleUser role;
 
     @Column(name = "password", nullable = false, length = 100)
     @JsonIgnore
