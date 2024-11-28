@@ -16,4 +16,6 @@ public class StudentCreateOrUpdateRequest {
     private LocalDate dob;
 
     private String hometown;
+
+    private String name;
 }

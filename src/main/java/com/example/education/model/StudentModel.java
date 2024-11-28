@@ -30,4 +30,6 @@ public class StudentModel extends BaseEntity {
     private LocalDate dob;
 
     private String hometown;
+
+    private String name;
 }

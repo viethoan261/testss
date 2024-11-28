@@ -3,6 +3,7 @@ package com.example.education.controller;
 import com.example.education.common.util.ResponseHelper;
 import com.example.education.dto.request.GuestCreateUpdateRequest;
 import com.example.education.dto.request.RoomCreateUpdateRequest;
+import com.example.education.dto.response.GuestResponse;
 import com.example.education.model.GuestModel;
 import com.example.education.model.RoomModel;
 import com.example.education.service.GuestService;
@@ -26,7 +27,7 @@ public class GuestController {
     @Operation(summary = "find all guest")
     @GetMapping("")
     public Object findAll() {
-        List<GuestModel> res = guestService.getAll();
+        List<GuestResponse> res = guestService.getAll();
 
         return ResponseHelper.getResponse(res, HttpStatus.OK);
     }

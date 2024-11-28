@@ -40,6 +40,7 @@ public class StudentServiceImpl implements StudentService {
         studentModel.setHometown(request.getHometown());
         studentModel.setClassName(request.getClassName());
         studentModel.setIdentifyCard(request.getIdentifyCard());
+        studentModel.setName(request.getName());
 
         studentRepository.save(studentModel);
         return true;
@@ -57,6 +58,7 @@ public class StudentServiceImpl implements StudentService {
         studentModel.setHometown(request.getHometown());
         studentModel.setClassName(request.getClassName());
         studentModel.setIdentifyCard(request.getIdentifyCard());
+        studentModel.setName(request.getName());
 
         studentRepository.save(studentModel);
         return true;
