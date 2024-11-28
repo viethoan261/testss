@@ -14,4 +14,6 @@ public interface StudentService {
     boolean create(StudentCreateOrUpdateRequest request);
 
     boolean update(UUID id, StudentCreateOrUpdateRequest request);
+
+    boolean delete(UUID id);
 }

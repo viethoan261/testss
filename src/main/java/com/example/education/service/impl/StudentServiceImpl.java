@@ -53,6 +53,7 @@ public class StudentServiceImpl implements StudentService {
 
         StudentModel studentModel = studentOpt.get();
         studentModel.setDob(request.getDob());
+        studentModel.setStudentNo(request.getStudentNo());
         studentModel.setHometown(request.getHometown());
         studentModel.setClassName(request.getClassName());
         studentModel.setIdentifyCard(request.getIdentifyCard());
@@ -60,4 +61,12 @@ public class StudentServiceImpl implements StudentService {
         studentRepository.save(studentModel);
         return true;
     }
+
+    @Override
+    public boolean delete(UUID id) {
+        studentRepository.deleteById(id);
+        return true;
+    }
+
+
 }

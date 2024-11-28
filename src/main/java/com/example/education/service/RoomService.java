@@ -14,4 +14,6 @@ public interface RoomService {
     boolean create(RoomCreateUpdateRequest request);
 
     boolean update(UUID id, RoomCreateUpdateRequest request);
+
+    boolean delete(UUID id);
 }

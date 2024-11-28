@@ -61,4 +61,9 @@ public class RoomController {
 
         return ResponseHelper.getResponse(true, HttpStatus.OK);
     }
+
+    @DeleteMapping("{id}")
+    public Object delete(@PathVariable String id) {
+        return ResponseHelper.getResponse(roomService.delete(UUID.fromString(id)), HttpStatus.OK);
+    }
 }

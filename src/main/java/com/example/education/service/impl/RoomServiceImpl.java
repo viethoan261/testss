@@ -56,4 +56,10 @@ public class RoomServiceImpl implements RoomService {
         roomRepository.save(roomModel);
         return true;
     }
+
+    @Override
+    public boolean delete(UUID id) {
+        roomRepository.deleteById(id);
+        return true;
+    }
 }

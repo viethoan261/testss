@@ -23,7 +23,7 @@ public class ServiceModel extends BaseEntity {
     @Column(name = "service_name", nullable = false)
     private String serviceName;
 
-    private String price;
+    private double price;
 
     @Column(name = "time_used", nullable = false)
     private double timeUsed;
