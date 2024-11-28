@@ -60,7 +60,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		// API AUTHENTICATION
 		http.antMatcher("/api/v1/**").authorizeRequests()
 				.antMatchers("/api/v1/auth/login").permitAll()
-				.antMatchers("/api/v1/auth/register").hasAnyRole("ADMIN")
+				.antMatchers("/api/v1/auth/register").permitAll()
 				.anyRequest().authenticated();
 	}
 }
